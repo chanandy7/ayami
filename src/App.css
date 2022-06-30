@@ -13,11 +13,6 @@
     color: white;
 }
 
-.App-link {
-    color: #61dafb;
-}
-
-
 .vertical-rl {
     margin-top: 10px;
     writing-mode: vertical-rl;
@@ -37,6 +32,11 @@
     color: white;
 
 }
+
+/* body {
+    background-color: black;
+} */
+
 
 .font-link {
     font-family: 'Noto Serif JP', serif;
