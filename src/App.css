@@ -20,8 +20,11 @@
     font-size: 100px;
     font-family: 'Noto Serif JP', serif;
     color: white;
+    padding-top: 10px;
 
 }
+
+
 
 .vertical-rl2 {
     writing-mode: vertical-rl;
@@ -33,9 +36,9 @@
 
 }
 
-/* body {
-    background-color: black;
-} */
+.active {
+    max-width: '50px';
+}
 
 
 .font-link {
