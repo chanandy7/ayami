@@ -50,7 +50,8 @@ function App() {
 
     //will need to just show back the original screen
     const playAudio1 = () => {
-        console.log("play audio 1")
+        setIsActive(false);
+        setIsCheck(false);
     }
 
 
@@ -61,8 +62,11 @@ function App() {
                 {!isCheck && (<h1 className="vertical-rl">{`痴漢です`}<br /><div className='vertical-rl2 '>{`助けてください`}</div> </h1>)}
                 {isCheck && (<h1 className="vertical-rl" style={{ fontSize: '70px', color: 'yellow', }}>{`ちかん`}<br /> <div className='vertical-rl2' style={{ fontSize: '40px', marginTop: '20px' }}>{`されていませんか？`}</div> </h1>)}
 
-                {!isActive && (<><h2 className="tapMessage">画面をタップすると作動します</h2>
+                {!isActive && !isCheck && (<><h2 className="tapMessage">画面をタップすると作動します</h2>
                     <h3 className="silentModeMessage">マナーモードでも音がなりますので、使用の際はご注意ください</h3></>)}
+
+                {isCheck && (<><p>※ 音は鳴りません。</p></>)}
+
 
             </div>
 
@@ -72,14 +76,7 @@ function App() {
 
             {isActive && (<><br /><br /><br /><br /><h1 className="tapMessage">画面をタップすると停止します</h1>
                 <p className="silentModeMessage">マナーモードでも音がなりますので、使用の際はご注意ください</p></>)}
-
-
-
         </div>
-
-
-
     );
 }
-
 export default App;
