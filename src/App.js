@@ -1,7 +1,13 @@
 import { useEffect, useState } from 'react';
 import './App.css';
 
+import useSound from 'use-sound'
+import mySound from '../src/mySound.mp4'
+
+
+
 function App() {
+
 
     // const [color, setColor] = useState('black');
 
@@ -33,10 +39,17 @@ function App() {
 
     const [isCheck, setIsCheck] = useState(false)
 
+    const [playSound, { stop }] = useSound(mySound)
+
     const handleClick = () => {
         // 👇️ toggle
-        if (!isCheck) {
+        if (!isCheck && !isActive) {
             setIsActive(current => !current);
+            playSound();
+        }
+        if (!isCheck && isActive) {
+            setIsActive(current => !current);
+            stop();
         }
 
         // 👇️ or set to true
